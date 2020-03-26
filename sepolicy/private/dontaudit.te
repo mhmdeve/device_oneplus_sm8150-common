@@ -1,3 +1,6 @@
+# b/152468658
+dontaudit vdc self:capability kill;
+
 # b/148033913
 dontaudit fsck self:capability kill;
 
