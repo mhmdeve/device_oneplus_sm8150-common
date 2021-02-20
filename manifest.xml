@@ -635,4 +635,14 @@
         <transport>hwbinder</transport>
         <fqname>@1.1::IGoogleBattery/default</fqname>
     </hal>
+    <hal format="hidl">
+        <name>vendor.oneplus.hardware.ifaa</name>
+        <transport>hwbinder</transport>
+        <version>2.0</version>
+        <interface>
+            <name>IOneplusIfaa</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@2.0::IOneplusIfaa/default</fqname>
+    </hal>
 </manifest>
