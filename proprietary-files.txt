@@ -310,7 +310,7 @@ system_ext/etc/permissions/com.oneplus.software.xml
 system_ext/etc/permissions/privapp-permissions-oem-system_ext.xml
 -system_ext/priv-app/daxService/daxService.apk
 vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service
-vendor/etc/dolby/dax-default.xml
+vendor/etc/dolby/dax-default.xml|8828b198e656d4a72a31b3b490bdf3913ff663db
 vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
 vendor/lib/libdapparamstorage.so
 vendor/lib/libdeccfg.so
