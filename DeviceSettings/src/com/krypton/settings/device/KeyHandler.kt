@@ -55,12 +55,12 @@ import android.view.KeyEvent
 
 import androidx.annotation.Keep
 
-import com.android.internal.lineage.hardware.LineageHardwareManager
-import com.android.internal.lineage.hardware.LineageHardwareManager.FEATURE_TOUCHSCREEN_GESTURES
-import com.android.internal.lineage.hardware.TouchscreenGesture
+import com.android.internal.evolution.hardware.LineageHardwareManager
+import com.android.internal.evolution.hardware.LineageHardwareManager.FEATURE_TOUCHSCREEN_GESTURES
+import com.android.internal.evolution.hardware.TouchscreenGesture
 import com.android.internal.os.DeviceKeyHandler
 import com.android.internal.R
-import com.android.internal.util.krypton.KryptonUtils
+import com.android.internal.util.evolution.EvolutionUtils
 
 @Keep
 class KeyHandler(private val context: Context) : DeviceKeyHandler {
@@ -213,7 +213,7 @@ class KeyHandler(private val context: Context) : DeviceKeyHandler {
     }
 
     private fun toggleFlashlight() {
-        KryptonUtils.toggleCameraFlash()
+        EvolutionUtils.toggleCameraFlash()
     }
 
     private fun playPauseMusic() {

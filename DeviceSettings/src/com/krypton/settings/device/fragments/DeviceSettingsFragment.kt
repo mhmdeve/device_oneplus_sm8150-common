@@ -25,7 +25,7 @@ import android.os.Vibrator
 import androidx.preference.PreferenceFragmentCompat
 
 import com.android.internal.R
-import com.android.internal.util.krypton.FileUtils
+import com.android.internal.util.evolution.FileUtils
 import com.krypton.settings.preference.CustomSeekBarPreference
 
 class DeviceSettingsFragment : PreferenceFragmentCompat() {
@@ -59,7 +59,7 @@ class DeviceSettingsFragment : PreferenceFragmentCompat() {
 
     companion object {
         private const val KEY_VIBRATOR_CATEGORY = "vibrator"
-        private const val PROP_KRYPTON_DEVICE = "ro.krypton.build.device"
+        private const val PROP_KRYPTON_DEVICE = "ro.product.system.device"
         private const val GUACAMOLEB = "guacamoleb"
         private const val HOTDOGB = "hotdogb"
 

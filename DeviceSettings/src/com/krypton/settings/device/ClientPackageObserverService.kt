@@ -28,8 +28,8 @@ import android.os.IBinder
 import android.os.RemoteException
 import android.util.Log
 
-import com.android.internal.util.krypton.FileUtils
-import com.android.internal.util.krypton.KryptonUtils
+import com.android.internal.util.evolution.FileUtils
+import com.android.internal.util.evolution.EvolutionUtils
 
 import java.io.File
 
@@ -60,7 +60,7 @@ class ClientPackageObserverService : Service() {
     override fun onCreate() {
         super.onCreate()
         logD("onCreate")
-        isOpCameraInstalledAndActive = KryptonUtils.isPackageInstalled(this,
+        isOpCameraInstalledAndActive = EvolutionUtils.isPackageInstalled(this,
             CLIENT_PACKAGE_NAME, false /** ignore state */)
         logD("isOpCameraInstalledAndActive = $isOpCameraInstalledAndActive")
         if (isOpCameraInstalledAndActive) {
@@ -87,7 +87,7 @@ class ClientPackageObserverService : Service() {
     }
 
     private fun registerClientObserver() {
-        isOpCameraInstalledAndActive = KryptonUtils.isPackageInstalled(this,
+        isOpCameraInstalledAndActive = EvolutionUtils.isPackageInstalled(this,
             CLIENT_PACKAGE_NAME, false /** ignore state */)
         if (isOpCameraInstalledAndActive && !clientObserverRegistered) {
             logD("registering client observer")
