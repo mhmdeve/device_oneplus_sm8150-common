@@ -25,10 +25,10 @@ import android.provider.Settings
 
 import androidx.annotation.Keep
 
-import com.android.internal.lineage.hardware.LineageHardwareManager
-import com.android.internal.lineage.hardware.LineageHardwareManager.FEATURE_TOUCHSCREEN_GESTURES
-import com.android.internal.lineage.hardware.TouchscreenGesture
-import com.android.internal.util.krypton.FileUtils
+import com.android.internal.evolution.hardware.LineageHardwareManager
+import com.android.internal.evolution.hardware.LineageHardwareManager.FEATURE_TOUCHSCREEN_GESTURES
+import com.android.internal.evolution.hardware.TouchscreenGesture
+import com.android.internal.util.evolution.FileUtils
 
 @Keep
 class BootCompletedReceiver: BroadcastReceiver() {

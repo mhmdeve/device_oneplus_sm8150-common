@@ -24,9 +24,9 @@ import android.os.Bundle
 import androidx.annotation.Keep
 import androidx.preference.PreferenceFragmentCompat
 
-import com.android.internal.lineage.hardware.LineageHardwareManager
-import com.android.internal.lineage.hardware.LineageHardwareManager.FEATURE_TOUCHSCREEN_GESTURES
-import com.android.internal.lineage.hardware.TouchscreenGesture
+import com.android.internal.evolution.hardware.LineageHardwareManager
+import com.android.internal.evolution.hardware.LineageHardwareManager.FEATURE_TOUCHSCREEN_GESTURES
+import com.android.internal.evolution.hardware.TouchscreenGesture
 
 import com.krypton.settings.device.R
 import com.krypton.settings.device.Utils
