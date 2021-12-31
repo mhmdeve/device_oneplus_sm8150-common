@@ -18,9 +18,11 @@
     <!-- App Title -->
     <string name="device_settings_title">OnePlus Settings</string>
 
-    <string name="display_title">Display</string>
+    <string name="display_title">Oneplus Settings</string>
 
     <string name="gesture_title">Gestures</string>
+
+    <string name="device_summary">Adjust OnePlus specific device settings</string>
 
     <!-- Screen off Gestures : Input -->
     <string name="touchscreen_gesture_settings_title">Touchscreen gestures</string>
