@@ -350,6 +350,11 @@ PRODUCT_PACKAGES += \
 # Oneplus cam
 TARGET_SHIPS_OOSCAM := false
 
+# OnePlus Apps
+PRODUCT_PACKAGES += \
+    OnePlusCameraOverlay \
+    OnePlusGalleryOverlay
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti \
