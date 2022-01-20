@@ -68,6 +68,10 @@ ro.netflix.bsp_rev=Q855-16947-1
 ro.vendor.product.manufacturer.db=OP_PHONE
 ro.vendor.product.device.db=OP_DEVICE
 
+# OnePlus
+ro.vendor.product.manufacturer.db=OP_PHONE
+ro.vendor.product.device.db=OP_DEVICE
+
 # Perf
 ro.vendor.qti.sys.fw.bg_apps_limit=60
 
