@@ -350,6 +350,13 @@ PRODUCT_PACKAGES += \
 # Oneplus cam
 TARGET_SHIPS_OOSCAM := false
 
+# OnePlus
+PRODUCT_PACKAGES += \
+    oneplus-fwk
+
+PRODUCT_BOOT_JARS += \
+    oneplus-fwk
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti \
