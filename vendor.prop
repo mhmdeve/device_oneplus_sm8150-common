@@ -63,6 +63,11 @@ ro.bluetooth.a2dp_offload.supported=true
 ro.vendor.camera.res.fmq.size=1048576
 persist.camera.assert.panic=true
 ro.opcamera.support=true
+persist.camera.eis.enable=1
+persist.camera.is_mode=4
+persist.vendor.camera.oissr.debug=1
+vendor.debug.camera.eisv2enable=1
+vendor.debug.camera.eisv3enable=1
 
 # Crypto
 ro.crypto.allow_encrypt_override=true
