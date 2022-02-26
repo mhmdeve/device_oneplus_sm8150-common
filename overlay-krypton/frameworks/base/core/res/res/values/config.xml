@@ -24,7 +24,7 @@
 
     <!-- Names of the key handler classes -->
     <string-array name="config_deviceKeyHandlerClasses" translatable="false">
-        <item>com.krypton.settings.device.KeyHandler</item>
+        <item>org.lineageos.device.DeviceSettings.KeyHandler</item>
         <item>org.lineageos.camerahelper.KeyHandler</item>
     </string-array>
 
@@ -37,4 +37,6 @@
     <!-- Whether device has hardware alert slider -->
     <bool name="config_hasAlertSlider">true</bool>
 
+    <!-- Whether key handler sends intent when changing slider position -->
+    <string name="config_alertSliderIntent">org.lineageos.device.DeviceSettings.UPDATE_SLIDER_POSITION</string>
 </resources>
