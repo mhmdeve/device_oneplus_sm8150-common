@@ -10,3 +10,7 @@ ro.com.google.lens.oem_camera_package=com.oneplus.camera
 
 # FUSE passthrough
 persist.sys.fuse.passthrough.enable=true
+
+# Audio (Dolby)
+debug.stagefright.omx_default_rank.sw-audio=16
+ro.control_privapp_permissions=log
