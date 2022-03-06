@@ -46,26 +46,27 @@ public class KeyHandler implements DeviceKeyHandler {
         mContext = context;
     }
 
-    public boolean handleKeyEvent(KeyEvent event) {
+    public KeyEvent handleKeyEvent(KeyEvent event) {
         switch (event.getScanCode()) {
             case MOTOR_EVENT_MANUAL_TO_DOWN:
                 if (event.getAction() == KeyEvent.ACTION_DOWN) {
                     showCameraMotorPressWarning();
                 }
-                return true;
+                break;
             case MOTOR_EVENT_UP_ABNORMAL:
                 if (event.getAction() == KeyEvent.ACTION_DOWN) {
                     showCameraMotorCannotGoUpWarning();
                 }
-                return true;
+                break;
             case MOTOR_EVENT_DOWN_ABNORMAL:
                 if (event.getAction() == KeyEvent.ACTION_DOWN) {
                     showCameraMotorCannotGoDownWarning();
                 }
-                return true;
+                break;
             default:
-                return false;
+                return event;
         }
+	return null;
     }
 
     private Context getPackageContext() {
