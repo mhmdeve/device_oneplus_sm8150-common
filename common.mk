@@ -178,6 +178,7 @@ PRODUCT_PACKAGES += \
 
 # Common init scripts
 PRODUCT_PACKAGES += \
+    fstab.swap \
     init.class_main.sh \
     init.oem.rc \
     init.opcamera.rc \
