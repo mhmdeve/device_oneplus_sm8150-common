@@ -619,5 +619,6 @@
             <name>IDms</name>
             <instance>default</instance>
         </interface>
+        <fqname>@1.0::IDms/default</fqname>
     </hal>
 </manifest>
