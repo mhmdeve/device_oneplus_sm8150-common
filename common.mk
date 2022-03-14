@@ -413,6 +413,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.touch@1.0-service.oneplus
 
+# OnePlus
+PRODUCT_PACKAGES += \
+    oneplus-fwk
+
 # tri-state key
 PRODUCT_PACKAGES += \
     tri-state-key_daemon.vendor
