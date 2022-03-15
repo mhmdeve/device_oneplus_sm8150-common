@@ -33,7 +33,7 @@
     <application
         android:icon="@drawable/ic_settings_device"
         android:label="@string/device_title"
-        android:theme="@style/AppTheme">
+        android:theme="@style/Theme.SubSettingsBase">
 
         <!-- Device Settings -->
         <activity
@@ -56,6 +56,16 @@
         <activity android:name=".KeyHandler" />
 
         <activity
+            android:name="org.lineageos.device.DeviceSettings.TouchscreenGestureActivity"
+            android:exported="true"
+            android:label="@string/touchscreen_gesture_settings_title">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
             android:name="org.lineageos.device.DeviceSettings.PanelSettingsActivity"
             android:exported="true"
             android:label="@string/panel_category_title"
@@ -67,7 +77,7 @@
         </activity>
 
         <receiver android:name="org.lineageos.device.DeviceSettings.Startup" >
-            <intent-filter android:priority="100" >
+            <intent-filter android:priority="500" >
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
