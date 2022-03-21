@@ -5,7 +5,8 @@ persist.vendor.audio.hac.enable    u:object_r:vendor_audio_prop:s0
 persist.vendor.bt.a2dp_offload_cap    u:object_r:bluetooth_a2dp_offload_prop:s0
 
 # Camera
-vendor.camera.        u:object_r:vendor_camera_prop:s0
+vendor.camera.                        u:object_r:vendor_camera_prop:s0
+vendor.oneplus.gallery.debugStory     u:object_r:vendor_camera_prop:s0
 
 # Device Info
 ro.vendor.product.device.db               u:object_r:vendor_db_security_prop:s0
