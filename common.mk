@@ -423,6 +423,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     oneplus-fwk
 
+PRODUCT_BOOT_JARS += \
+    oneplus-fwk
+
 # tri-state key
 PRODUCT_PACKAGES += \
     tri-state-key_daemon.vendor
