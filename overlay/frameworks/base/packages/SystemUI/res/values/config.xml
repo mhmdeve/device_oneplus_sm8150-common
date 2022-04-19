@@ -37,7 +37,4 @@
 
     <!-- Udfps vendor code -->
     <integer name="config_udfps_vendor_code">0</integer>
-
-    <!-- Doze: does this device support STATE_DOZE_SUSPEND?  -->
-    <bool name="doze_suspend_display_state_supported">true</bool>
 </resources>
