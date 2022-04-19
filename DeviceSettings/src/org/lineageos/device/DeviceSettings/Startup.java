@@ -32,8 +32,6 @@ public class Startup extends BroadcastReceiver {
     @Override
     public void onReceive(final Context context, final Intent bootintent) {
 
-        TouchscreenGestureFragment.restoreTouchscreenGestureStates(context);
-
         VibratorStrengthPreference.restore(context);
 
         Utils.enableService(context);
