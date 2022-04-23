@@ -21,3 +21,6 @@ allow system_app sysfs_leds:dir { search };
 
 allow system_app hal_cameraHIDL_hwservice:hwservice_manager find;
 binder_call(system_app, hal_cameraHIDL_default)
+
+# Battery Health
+r_dir_file(system_app, sysfs_battery_supply);
