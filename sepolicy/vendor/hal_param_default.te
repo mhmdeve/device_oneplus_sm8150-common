@@ -27,3 +27,5 @@ allow hal_param_default init:unix_stream_socket connectto;
 
 get_prop(hal_param_default, vendor_param_prop)
 set_prop(hal_param_default, vendor_param_prop)
+
+dontaudit hal_param_default bootloader_prop:property_service set;
