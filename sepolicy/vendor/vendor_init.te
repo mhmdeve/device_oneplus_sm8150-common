@@ -31,3 +31,5 @@ set_prop(vendor_init, vendor_nfc_prop)
 get_prop(vendor_init, vendor_db_security_prop)
 
 allow vendor_init block_device:lnk_file setattr;
+
+allow vendor_init debugfs:file getattr;
