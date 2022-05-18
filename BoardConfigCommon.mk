@@ -90,7 +90,6 @@ TARGET_USE_QTI_BT_STACK := true
 
 # Camera
 TARGET_CAMERA_NEEDS_CLIENT_INFO := true
-TARGET_USES_QTI_CAMERA_DEVICE := true
 
 # FOD
 TARGET_SURFACEFLINGER_UDFPS_LIB := //hardware/oneplus:libudfps_extension.oneplus
