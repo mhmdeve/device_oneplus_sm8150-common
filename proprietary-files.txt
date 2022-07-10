@@ -8,16 +8,19 @@ vendor/lib64/libadsp_default_listener.so
 # ADSP modules
 vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDAD_Encoder.so
 vendor/lib/rfsa/adsp/capi_v2_dap_cpdp.so
+vendor/lib/rfsa/adsp/libBeautyShot_skel.so
+vendor/lib/rfsa/adsp/libSuperSensor_skel.so
+vendor/lib/rfsa/adsp/libVC1Dec.so
+vendor/lib/rfsa/adsp/libVC1DecDsp_skel.so
 vendor/lib/rfsa/adsp/libapps_mem_heap.so
 vendor/lib/rfsa/adsp/libarcsoft_dualcam_refocus_skel.so
 vendor/lib/rfsa/adsp/libarcsoft_hdrplus_hvx_skel.so
-vendor/lib/rfsa/adsp/libBeautyShot_skel.so
 vendor/lib/rfsa/adsp/libcamera_nn_skel.so
 vendor/lib/rfsa/adsp/libcvpdsp_skel.so
+vendor/lib/rfsa/adsp/libdspCV_skel.so
 vendor/lib/rfsa/adsp/libdsp_streamer_add_constant.so
 vendor/lib/rfsa/adsp/libdsp_streamer_binning.so
 vendor/lib/rfsa/adsp/libdsp_streamer_skel.so
-vendor/lib/rfsa/adsp/libdspCV_skel.so
 vendor/lib/rfsa/adsp/libfastcvadsp.so
 vendor/lib/rfsa/adsp/libfastcvdsp_skel.so
 vendor/lib/rfsa/adsp/libhexagon_nn_skel.so
@@ -26,9 +29,6 @@ vendor/lib/rfsa/adsp/libscveObjectSegmentation_skel.so
 vendor/lib/rfsa/adsp/libscveT2T_skel.so
 vendor/lib/rfsa/adsp/libsns_device_mode_skel.so
 vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so
-vendor/lib/rfsa/adsp/libSuperSensor_skel.so
-vendor/lib/rfsa/adsp/libVC1Dec.so
-vendor/lib/rfsa/adsp/libVC1DecDsp_skel.so
 
 # ANT+ - from LA.UM.9.1.r1-11900.02-SMxxx0.QSSI12.0
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so|0f8f5c3081d0ef745e0896b1fceea15f52fe3b21
@@ -37,13 +37,13 @@ vendor/lib64/hw/com.dsi.ant@1.0-impl.so|0f8f5c3081d0ef745e0896b1fceea15f52fe3b21
 vendor/firmware/tfa98xx.cnt
 
 # Audio libraries
+vendor/lib/hw/vendor.qti.hardware.audiohalext@1.0-impl.so
 vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libhaptic_effect.so
 vendor/lib/soundfx/libqcbassboost.so
 vendor/lib/soundfx/libqcreverb.so
 vendor/lib/soundfx/libqcvirt.so
 vendor/lib/soundfx/libshoebox.so
-vendor/lib/hw/vendor.qti.hardware.audiohalext@1.0-impl.so
 vendor/lib/liba2dpoffload.so
 vendor/lib/libacdb-fts.so
 vendor/lib/libacdbloader.so
@@ -85,16 +85,22 @@ vendor/lib64/com.dsi.ant@1.0.so
 
 # Camera
 system_ext/lib64/libCameraMDMHelper.so
-system_ext/lib64/vendor.oneplus.hardware.camera@1.0.so
-system_ext/lib64/vendor.oneplus.hardware.camera@1.0-adapter-helper.so
-system_ext/lib64/vendor.oneplus.hardware.CameraMDMHIDL@1.0.so
 system_ext/lib64/vendor.oneplus.hardware.CameraMDMHIDL@1.0-adapter-helper.so
-vendor/bin/hw/vendor.oneplus.hardware.camera@1.0-service
+system_ext/lib64/vendor.oneplus.hardware.CameraMDMHIDL@1.0.so
+system_ext/lib64/vendor.oneplus.hardware.camera@1.0-adapter-helper.so
+system_ext/lib64/vendor.oneplus.hardware.camera@1.0.so
 vendor/bin/hw/vendor.oneplus.hardware.CameraMDMHIDL@1.0-service
+vendor/bin/hw/vendor.oneplus.hardware.camera@1.0-service
 vendor/bin/vl53l1_daemon_main
-vendor/etc/init/vendor.oneplus.hardware.camera@1.0-service.rc
 vendor/etc/init/vendor.oneplus.hardware.CameraMDMHIDL@1.0-service.rc
+vendor/etc/init/vendor.oneplus.hardware.camera@1.0-service.rc
 vendor/etc/init/vl53l1.rc
+vendor/lib64/libSTDualCamCaptureWT.so
+vendor/lib64/libSonyIMX471RmscLibrary.so
+vendor/lib64/libSuperSensor.so
+vendor/lib64/libSuperSensorFallback.so
+vendor/lib64/libSuperSensorProcessor.so
+vendor/lib64/libSuperSensorProcessorCWrapper.so
 vendor/lib64/lib_bokehlib.so
 vendor/lib64/lib_oneplus_watermark.so
 vendor/lib64/libarcsoft_beautyshot.so
@@ -131,13 +137,7 @@ vendor/lib64/libcvp_common.so
 vendor/lib64/libmorpho_image_refiner.so
 vendor/lib64/libmpbase.so
 vendor/lib64/libopcamera_native_modules.so
-vendor/lib64/libSonyIMX471RmscLibrary.so
 vendor/lib64/libstblur_capture_api.so
-vendor/lib64/libSTDualCamCaptureWT.so
-vendor/lib64/libSuperSensor.so
-vendor/lib64/libSuperSensorFallback.so
-vendor/lib64/libSuperSensorProcessor.so
-vendor/lib64/libSuperSensorProcessorCWrapper.so
 vendor/lib64/libswregistrationalgo.so
 vendor/lib64/libtriplecam_image_optical_zoom.so
 vendor/lib64/libtriplecam_optical_zoom_control.so
@@ -173,10 +173,10 @@ vendor/bin/hvdcp_opti
 vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc
 
 # Certificate Authority - from LA.UM.9.1.r1-11900.02-SMxxx0.QSSI12.0
+-vendor/app/CACertService/CACertService.apk|a430eb051f565ff00f4d8d2aa2dd2a7c8c3bec90
 vendor/lib64/libcacertclient.so|69ae73b9be13507ff39398ac5813ad709b8b7c32
 vendor/lib64/libjnihelper.so|d3687f06782adc074a38b9ff3c1aacd57ec7a6e7
 vendor/lib64/vendor.qti.hardware.cacert@1.0.so|1633c31212d1ea9338b79ebfc2476f83424f36ee
--vendor/app/CACertService/CACertService.apk|a430eb051f565ff00f4d8d2aa2dd2a7c8c3bec90
 
 # CNE
 -vendor/app/CneApp/CneApp.apk
@@ -210,8 +210,8 @@ vendor/etc/cne/wqeclient/VZW/VZW_profile5.xml
 vendor/etc/cne/wqeclient/VZW/VZW_profile6.xml
 vendor/etc/cne/profileSlm.xml
 vendor/etc/cne/slm.conf
-vendor/etc/init/cnd.rc
 vendor/etc/default-permissions/com.qualcomm.qti.cne.xml
+vendor/etc/init/cnd.rc
 vendor/lib64/libcne.so
 vendor/lib64/libcneapiclient.so
 vendor/lib64/libcneoplookup.so
@@ -278,11 +278,14 @@ vendor/lib64/vendor.display.color@1.5.so
 vendor/lib64/vendor.display.postproc@1.0.so
 
 # DPM (system) - from LA.UM.9.1.r1-11900.02-SMxxx0.QSSI12.0
+-framework/tcmclient.jar|8483036d9354e88f8875d5eb2618165855438b09
 system_ext/bin/dpmd|d8d958c1e3e3962903505bc4e5e74017ba9d3c3d
 system_ext/etc/dpm/dpm.conf|95e27da8c989e96c6faea6f0697bce11955b62a5
 system_ext/etc/init/dpmd.rc|738b638ff04cda368e22c03e16baf90ba157a6fc
 system_ext/etc/permissions/com.qti.dpmframework.xml|c4b7ad0879d00c1eba4f3fe3a88ddb8aa153629a
 system_ext/etc/permissions/dpmapi.xml|255903759a60a31c0876ec004e74554c753270fe
+-system_ext/framework/com.qti.dpmframework.jar|860ee07c410087de97ec10c325280ff3c57a094a
+-system_ext/framework/dpmapi.jar|391a3515c090cee22e3d104651c903d66a2ca54a
 system_ext/lib64/com.qualcomm.qti.dpm.api@1.0.so|23b83a83b8b05d52268026aa045d52b0b56ee641
 system_ext/lib64/libdiag_system.so|b511b314809f051186accb0e936568213ba01c99
 system_ext/lib64/libdpmctmgr.so|853c5d9d38538ec7d6ce41c2734994ea80234ff9
@@ -290,9 +293,6 @@ system_ext/lib64/libdpmfdmgr.so|ee25972996765437c6a3fadf28b11bd3ff2bf9f1
 system_ext/lib64/libdpmframework.so|ef6ce68d3fd62e6a2efe283433bde09e662cc357
 system_ext/lib64/libdpmtcm.so|c2d5f16a39967553a867daf3a9831c7dd06c5b55
 system_ext/lib64/vendor.qti.diaghal@1.0.so|8b6f1bb87b0780825e46e3d00680ffc0da0b50d9
--framework/tcmclient.jar|8483036d9354e88f8875d5eb2618165855438b09
--system_ext/framework/com.qti.dpmframework.jar|860ee07c410087de97ec10c325280ff3c57a094a
--system_ext/framework/dpmapi.jar|391a3515c090cee22e3d104651c903d66a2ca54a
 -system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk|81da04e2d224539cf830e35054f25dc718d4df97
 
 # DPM (vendor) - from LA.UM.9.1.r1-11900.02-SMxxx0.QSSI12.0
@@ -604,7 +604,6 @@ vendor/lib/libpn553_fw.so
 # OMX
 vendor/lib/libAlacSwDec.so
 vendor/lib/libApeSwDec.so
-vendor/lib/libdsd2pcm.so
 vendor/lib/libFlacSwDec.so
 vendor/lib/libMpeg4SwEncoder.so
 vendor/lib/libOmxAacDec.so
@@ -623,6 +622,7 @@ vendor/lib/libOmxSwVencMpeg4.so
 vendor/lib/libOmxVideoDSMode.so
 vendor/lib/libOmxVpp.so
 vendor/lib/libOmxWmaDec.so
+vendor/lib/libdsd2pcm.so
 vendor/lib/libswvdec.so
 vendor/lib64/libAlacSwDec.so
 vendor/lib64/libApeSwDec.so
@@ -662,12 +662,12 @@ vendor/etc/init/vendor.qti.hardware.perf@2.2-service.rc|459b4c23550a56ac545f78c6
 vendor/etc/lm/AdaptLaunchFeature.xml|bc226e5b64cae1d0bb637eb316626868b97e7c3f
 vendor/etc/lm/AppClassifierFeature.xml|80bcbf8fc50ed706e8549432140323dbb9e8ae4c
 vendor/etc/lm/GameOptimizationFeature.xml|5314e8dfdf363d0fbe4599ba64e3e765878569b9
-vendor/etc/msm_irqbalance.conf|0141a3e34175f62a3ae1f0f44cca94cf7043f2de
 vendor/etc/perf/commonresourceconfigs.xml|c03bd36054bb5d327ad12dc711b58b3f658d261c
 vendor/etc/perf/perfboostsconfig.xml|93e57b38e327bfbc174e925d639745e66949229b
 vendor/etc/perf/perfconfigstore.xml|62f780c6f974a62d18a66d0dcee30efb04903512
 vendor/etc/perf/targetconfig.xml|95f511bb4030b2755a0b340814fe41cccac994ab
 vendor/etc/perf/targetresourceconfigs.xml|44e33511b57320fade366bfd5be83dcf5930f540
+vendor/etc/msm_irqbalance.conf|0141a3e34175f62a3ae1f0f44cca94cf7043f2de
 vendor/lib64/libadaptlaunch.so|aa1da37d4ac954e273c310250fa634c7e1ae510f
 vendor/lib64/libappclassifier.so|0a3f393ceb33ca37a3ee7c608997807589f88418
 vendor/lib64/libgameoptfeature.so|90f27f9a822b493abbea642b0b062f1a874cd6f1
@@ -762,8 +762,8 @@ system_ext/framework/qcrilhook.jar
 -vendor/app/IWlanService/IWlanService.apk
 vendor/bin/hw/qcrild
 vendor/bin/hw/vendor.oneplus.hardware.param@1.0-service
-vendor/bin/adpl
 vendor/bin/ATFWD-daemon
+vendor/bin/adpl
 vendor/bin/ks
 vendor/bin/mdm_helper
 vendor/bin/netmgrd
@@ -779,8 +779,6 @@ vendor/bin/ssgtzd
 vendor/bin/tftp_server
 vendor/etc/data/dsi_config.xml
 vendor/etc/data/netmgr_config.xml
-vendor/etc/ssg/ta_config.json
-vendor/etc/ssg/tz_whitelist.json
 vendor/etc/init/dataadpl.rc
 vendor/etc/init/dataqti.rc
 vendor/etc/init/init-qcril-data.rc
@@ -792,6 +790,8 @@ vendor/etc/init/vendor.oneplus.hardware.param@1.0-service.rc
 vendor/etc/init/vendor.qti.rmt_storage.rc
 vendor/etc/init/vendor.qti.tftp.rc
 vendor/etc/seccomp_policy/atfwd@2.0.policy
+vendor/etc/ssg/ta_config.json
+vendor/etc/ssg/tz_whitelist.json
 vendor/lib/vendor.oneplus.hardware.param@1.0.so
 vendor/lib64/deviceInfoServiceModule.so
 vendor/lib64/libconfigdb.so
@@ -809,8 +809,8 @@ vendor/lib64/libopf.so
 vendor/lib64/libparam_vendor.so
 vendor/lib64/libpdmapper.so
 vendor/lib64/libpdnotifier.so
-vendor/lib64/libqcrildatactl.so
 vendor/lib64/libqcrilFramework.so
+vendor/lib64/libqcrildatactl.so
 vendor/lib64/libqrtr.so
 vendor/lib64/libqsocket.so
 vendor/lib64/libril-qc-hal-qmi.so
@@ -843,7 +843,6 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.1.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.2.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so
-vendor/radio/qcril_database/qcril.db
 vendor/radio/qcril_database/upgrade/0_initial.sql
 vendor/radio/qcril_database/upgrade/1_version_intro.sql
 vendor/radio/qcril_database/upgrade/2_version_add_wps_config.sql
@@ -853,6 +852,7 @@ vendor/radio/qcril_database/upgrade/5_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/6_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/7_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/8_version_update_ecc_table.sql
+vendor/radio/qcril_database/qcril.db
 
 # Sensors
 vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
