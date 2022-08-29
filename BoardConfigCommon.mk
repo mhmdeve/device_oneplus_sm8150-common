@@ -54,6 +54,7 @@ TARGET_BOARD_PLATFORM := msmnile
 TARGET_ODM_PROP += $(VENDOR_PATH)/odm.prop
 TARGET_SYSTEM_PROP += $(VENDOR_PATH)/system.prop
 TARGET_VENDOR_PROP += $(VENDOR_PATH)/vendor.prop
+TARGET_SYSTEM_EXT_PROP += $(VENDOR_PATH)/system_ext.prop
 
 # A/B
 AB_OTA_UPDATER := true
