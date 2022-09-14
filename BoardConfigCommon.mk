@@ -11,6 +11,7 @@ BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
 BOARD_VENDOR := oneplus
 
 VENDOR_PATH := device/oneplus/sm8150-common
+TARGET_HALS_PATH := hardware/qcom-caf/sm8150/
 
 # Architecture
 TARGET_ARCH := arm64
@@ -33,15 +34,18 @@ BOARD_BOOT_HEADER_VERSION := 2
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disabled=1 msm_rtb.filter=0x237 service_locator.enable=1 swiotlb=2048 loop.max_part=7 androidboot.usbcontroller=a600000.dwc3  kpti=off
 BOARD_KERNEL_CMDLINE += androidboot.vbmeta.avb_version=1.0
+BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_RAMDISK_USE_LZ4 := true
-KERNEL_DEFCONFIG := vendor/sm8150-perf_defconfig
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-gnu-
-TARGET_KERNEL_CROSS_COMPILE_ARM32_PREFIX := arm-linux-gnueabi-
-KERNEL_LLVM_SUPPORT := true
-KERNEL_CUSTOM_LLVM := true
+TARGET_KERNEL_ADDITIONAL_FLAGS := LLVM=1 AS=llvm-as AR=llvm-ar NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip
+TARGET_KERNEL_CLANG_COMPILE := true
+TARGET_KERNEL_CLANG_VERSION := proton
+TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-proton
+TARGET_KERNEL_CONFIG := gulch_defconfig
+TARGET_KERNEL_SOURCE := kernel/oneplus/tmp2
+TARGET_KERNEL_VERSION := 4.14
 
 # A/B
 AB_OTA_UPDATER := true
@@ -74,8 +78,7 @@ TARGET_SURFACEFLINGER_UDFPS_LIB := //device/oneplus/common:libudfps_extension.on
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     $(VENDOR_PATH)/configs/vintf/oneplus_vendor_framework_compatibility_matrix.xml
 
-DEVICE_MATRIX_FILE += device/qcom/common/compatibility_matrix.xml
-
+DEVICE_MATRIX_FILE += $(VENDOR_PATH)/configs/vintf/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE += $(VENDOR_PATH)/configs/vintf/manifest.xml
 ODM_MANIFEST_FILES += $(VENDOR_PATH)/configs/vintf/manifest-qva.xml
 
@@ -143,9 +146,15 @@ SOONG_CONFIG_ONEPLUS_MSMNILE_INIT_PARTITION_SCHEME := non_dynamic
 endif
 
 # Sepolicy
+include device/qcom/sepolicy_vndr/SEPolicy.mk
+
 BOARD_VENDOR_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy/vendor
 PRODUCT_PRIVATE_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy/private
 PRODUCT_PUBLIC_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy/public
+
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += \
+    hardware/qcom-caf/sm8150
 
 # Sensors
 SOONG_CONFIG_NAMESPACES += ONEPLUS_MSMNILE_SENSORS

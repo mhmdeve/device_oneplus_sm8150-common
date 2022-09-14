@@ -1,4 +1,5 @@
 <manifest version="2.0" type="device" target-level="4">
+    <kernel target-level="4"/>
     <hal format="hidl">
         <name>android.hardware.audio</name>
         <transport>hwbinder</transport>
@@ -610,5 +611,17 @@
             <name>IQspmhal</name>
             <instance>default</instance>
         </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.graphics.composer</name>
+        <transport>hwbinder</transport>
+        <fqname>@2.4::IComposer/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.graphics.mapper</name>
+        <transport>hwbinder</transport>
+        <fqname>@2.1::IMapper/default</fqname>
+        <fqname>@3.0::IMapper/default</fqname>
+        <fqname>@4.0::IMapper/default</fqname>
     </hal>
 </manifest>

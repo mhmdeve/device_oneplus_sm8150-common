@@ -13,6 +13,8 @@ $(call inherit-product-if-exists, vendor/oneplus/camera/camera-vendor.mk)
 # Project ID Quota
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
+$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
+
 # Overlays
 PRODUCT_PACKAGES += \
     FlamingoOnePlusSM8150Frameworks \
