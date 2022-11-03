@@ -397,3 +397,9 @@ service rmdpshdcp2 /system/bin/rm /mnt/vendor/op2/DPS_hdcp2
     oneshot
     seclabel u:r:vold:s0
 #endif
+
+on property:sys.boot_completed=1
+    # Restrict permissions to socket file
+    # to hide Magisk & co.
+    chmod 440 /proc/net/unix
+    
