@@ -11,6 +11,7 @@ vendor.bluetooth.soc=cherokee
 persist.camera.assert.panic=true
 persist.camera.privapp.list=com.oneplus.factorymode,com.oneplus.camera,com.oem.autotest,com.oneplus.healthcheck
 ro.opcamera.support=true
+persist.vendor.camera.sceneclassify.enable=0
 
 # CNE
 persist.vendor.cne.feature=1
