@@ -57,6 +57,7 @@ PRODUCT_COPY_FILES += \
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio@2.0-impl:32 \
+    android.hardware.bluetooth.audio-impl \
     audio.bluetooth.default:32 \
     com.dsi.ant@1.0.vendor:64 \
     vendor.qti.hardware.bluetooth_audio@2.0.vendor:32 \
