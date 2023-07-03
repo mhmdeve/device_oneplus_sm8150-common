@@ -37,6 +37,8 @@ vendor/lib64/hw/com.dsi.ant@1.0-impl.so|87dc1a131534659173e71e108e7a3ffe6325845f
 vendor/firmware/tfa98xx.cnt
 
 # Audio libraries
+system_ext/lib/libvraudio.so
+system_ext/lib64/libvraudio.so
 vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libhaptic_effect.so
 vendor/lib/soundfx/libqcbassboost.so
