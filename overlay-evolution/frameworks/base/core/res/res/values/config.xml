@@ -88,4 +88,7 @@
         <item>com.oneplus.camera</item>
         <item>org.lineageos.aperture</item>
     </string-array>
+
+    <!-- Pocket Lock -->
+    <bool name="config_pocketModeSupported">true</bool>
 </resources>
